@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-firestore.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/logo1.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="../CSS/PatientDetails.css">
+    <title>Patient Details</title>
+</head>
+
+<body>
+
+    <h1>Patient Records</h1>
+    <a href="../HTML/Precord.html" id="add">Add new Patient</a>
+
+    <div class="content">
+
+        <ul id="Patient-list"></ul>
+
+    </div>
+    <div class="collapsible-body white"><span></span></div>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyAMqbgnd-dLz8mtk_1AMseLq57826_nd4E",
+            authDomain: "hospital-management-syst-f24b1.firebaseapp.com",
+            databaseURL: "https://hospital-management-syst-f24b1.firebaseio.com",
+            projectId: "hospital-management-syst-f24b1",
+            storageBucket: "hospital-management-syst-f24b1.appspot.com",
+            messagingSenderId: "460067289116",
+            appId: "1:460067289116:web:bb5ca6301aa2ec79c807d9",
+            measurementId: "G-0D1ECPXQVV"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const Precord = firebase.firestore();
+
+        // Precord.settings({
+        //     timestampsInSnapshots: true
+        // });
+    </script>
+    <script src="../JS/PatientDetails.js"></script>
+</body>
+
+</html>

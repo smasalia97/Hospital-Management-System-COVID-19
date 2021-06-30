@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/logo1.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="../CSS/Appointment.css">
+    <title>Appointment</title>
+</head>
+
+<body>
+
+
+
+    <h1>Appointments</h1>
+
+    <div class="content">
+
+        <form id="InputAppointment">
+            <input type="text" name="Patient_Name" placeholder="Enter Patient Name">
+            <input type="text" name="Doctor_Name" placeholder="Enter Doctor's Name">
+            <input type="text" name="Date" placeholder="Enter Date">
+            <input type="text" name="Time" placeholder="Enter Time">
+
+            <button>Add Data</button>
+        </form>
+
+        <ul id="Appointment"></ul>
+
+    </div>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyAMqbgnd-dLz8mtk_1AMseLq57826_nd4E",
+            authDomain: "hospital-management-syst-f24b1.firebaseapp.com",
+            databaseURL: "https://hospital-management-syst-f24b1.firebaseio.com",
+            projectId: "hospital-management-syst-f24b1",
+            storageBucket: "hospital-management-syst-f24b1.appspot.com",
+            messagingSenderId: "460067289116",
+            appId: "1:460067289116:web:f7004942e1f6ad0ac807d9",
+            measurementId: "G-92E1LFMC9W"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        const db = firebase.firestore();
+        // db.settings({
+        //     timestampsInSnapshots: true
+        // });
+    </script>
+
+    <script src="../JS/Appointment.js"></script>
+
+</body>
+
+</html>

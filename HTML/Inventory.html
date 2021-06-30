@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/logo1.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="../CSS/Inventory.css">
+    <title>Inventory</title>
+</head>
+
+<body>
+
+    <h1>Inventory</h1>
+
+    <div class="content">
+
+        <form id="InputData">
+            <input type="text" name="Item_Name" placeholder="Enter Item Name">
+            <input type="number" name="Item_Count" placeholder="Enter Item Count">
+            <button>Add Data</button>
+        </form>
+
+        <ul id="Data"></ul>
+
+    </div>
+
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyAMqbgnd-dLz8mtk_1AMseLq57826_nd4E",
+            authDomain: "hospital-management-syst-f24b1.firebaseapp.com",
+            databaseURL: "https://hospital-management-syst-f24b1.firebaseio.com",
+            projectId: "hospital-management-syst-f24b1",
+            storageBucket: "hospital-management-syst-f24b1.appspot.com",
+            messagingSenderId: "460067289116",
+            appId: "1:460067289116:web:a32a437995e1d46ec807d9",
+            measurementId: "G-MM6REQ52X4"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        const dbi = firebase.firestore();
+        dbi.settings({
+            timestampsInSnapshots: true
+        });
+    </script>
+
+    <script src="../JS/Inventory.js"></script>
+
+</body>
+
+</html>

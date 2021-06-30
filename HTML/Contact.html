@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/logo1.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="../CSS/Contact.css">
+    <title>Contact Us</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h2>Contact us</h2>
+        <div id="error_message">
+
+        </div>
+        <form action="" id="myform" onsubmit="return validate();">
+            <div class="input_field">
+                <input type="text" placeholder="Name" id="name">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Subject" id="subject">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Phone" id="phone">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Email" id="email">
+            </div>
+            <div class="input_field">
+                <textarea placeholder="Message" id="message"></textarea>
+            </div>
+            <div class="btn">
+                <input type="submit">
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <p>For further queries one can mail on our email id :- hospitalmanagementsystem20@gmail.com. We'll get to you.</p>
+    </div>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAMqbgnd-dLz8mtk_1AMseLq57826_nd4E",
+            authDomain: "hospital-management-syst-f24b1.firebaseapp.com",
+            databaseURL: "https://hospital-management-syst-f24b1.firebaseio.com",
+            projectId: "hospital-management-syst-f24b1",
+            storageBucket: "hospital-management-syst-f24b1.appspot.com",
+            messagingSenderId: "460067289116",
+            appId: "1:460067289116:web:08d8b2ef1e64cac4c807d9",
+            measurementId: "G-XCG1M09FLV"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const Contact = firebase.firestore();
+        // Contact.settings({
+        //     timestampsInSnapshots: true
+        // });
+    </script>
+
+    <script src="../JS/Contact.js"></script>
+
+</body>
+
+</html>
+
+</html>

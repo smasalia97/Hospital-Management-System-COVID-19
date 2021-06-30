@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/logo1.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="../CSS/StaffSchedule.css">
+    <title>Staff Schedule</title>
+</head>
+
+
+<body>
+
+    <h1>Staff Schdeule</h1>
+
+    <div class="content">
+
+        <form id="InputSchedule">
+            <input type="text" name="name" placeholder="Enter Name">
+            <input type="text" name="place" placeholder="Enter place">
+            <input type="datetime-local" name="dateAndTime">
+            <button>Add Data</button>
+        </form>
+
+        <ul id="Schedule"></ul>
+
+    </div>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAMqbgnd-dLz8mtk_1AMseLq57826_nd4E",
+            authDomain: "hospital-management-syst-f24b1.firebaseapp.com",
+            databaseURL: "https://hospital-management-syst-f24b1.firebaseio.com",
+            projectId: "hospital-management-syst-f24b1",
+            storageBucket: "hospital-management-syst-f24b1.appspot.com",
+            messagingSenderId: "460067289116",
+            appId: "1:460067289116:web:dc15f9fbba918bc5c807d9",
+            measurementId: "G-3ET5RDX9CK"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        // db.settings({
+        //     timestampsInSnapshots: true
+        // });
+    </script>
+    <script src="../JS/StaffSchedule.js"></script>
+</body>
+
+</html>

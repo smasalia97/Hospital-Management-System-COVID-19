@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/logo1.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="../CSS/Bill.css">
+    <title>Bill Details</title>
+</head>
+
+<body>
+
+    <h2>Bill Details</h2>
+
+    <div class="content">
+
+        <form id="InputBill">
+
+            <input type="text" name="Patient_Name" placeholder="Enter Patient's Name">
+            <input type="text" name="Admission Date" placeholder="Enter Admission Date">
+
+            <button>Add Data</button>
+
+            <!-- <div class="dropdown">
+                <button onclick="show_hide()" class="btn">Drop</button>
+
+                <div style="display:none;" id="drop-content">
+                    <input type="text" name="Patient_Name" placeholder="Enter Patient's Name">
+                    <input type="text" name="Doctor_Name" placeholder="Enter Doctor's Name">
+                    <input type="text" name="My_Name" placeholder="Enter My Name">
+                </div>
+            </div> -->
+
+        </form>
+
+        <ul id="Bill"></ul>
+
+    </div>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyAMqbgnd-dLz8mtk_1AMseLq57826_nd4E",
+            authDomain: "hospital-management-syst-f24b1.firebaseapp.com",
+            databaseURL: "https://hospital-management-syst-f24b1.firebaseio.com",
+            projectId: "hospital-management-syst-f24b1",
+            storageBucket: "hospital-management-syst-f24b1.appspot.com",
+            messagingSenderId: "460067289116",
+            appId: "1:460067289116:web:a32a437995e1d46ec807d9",
+            measurementId: "G-MM6REQ52X4"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        const bd = firebase.firestore();
+        bd.settings({
+            timestampsInSnapshots: true
+        });
+    </script>
+    <script src="../JS/Bill.js"></script>
+
+</body>
+
+</html>

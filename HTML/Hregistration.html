@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/logo1.png" type="image/gif" sizes="16x16">
+    <link href="../CSS/Hregistration.css" rel="stylesheet">
+
+    <title>Hospital Registration</title>
+</head>
+
+<body>
+    <div class="image"></div>
+    <div class="container">
+        <h1>Registration</h1>
+        <form action="/" id="form" method="GET">
+            <div>
+                Hospital name * :
+                <input type="text" name="Hname" id="Hname " placeholder="Enter Hospital name" style="font-size: 21px; font-family: monospace;" required>
+            </div>
+            <br>
+            <div>
+                Required Health Care Provider : <input type="text" name="HCP" id="0" style="font-size: 21px; font-family: monospace;">
+            </div>
+            <br>
+            <div>
+                Hospital Registration Number * :
+                <input type="number" name="HRno" style="font-size: 21px; font-family: monospace;" required>
+            </div>
+
+            <div>
+                <h6>Address * : </h6><textarea name="Address" id="add" cols="" rows="4" style="font-size: 21px; font-family: monospace;"></textarea>
+            </div>
+            <br>
+            <div>
+                State : <input type="text" name="State" id="A1" style="font-size: 21px; font-family: monospace;">
+            </div>
+            <br>
+            <div>
+                District : <input type="text" name="Dist" id="A" style="font-size: 21px; font-family: monospace;">
+            </div>
+            <br>
+            <div> Sub Dist : <input type="text" name="SubDist" id="B" style="font-size: 21px; font-family: monospace;">
+            </div>
+            <br>
+            <div>
+                Town : <input type="text" name="Town" id="C" style="font-size: 21px; font-family: monospace;">
+            </div>
+            <br>
+            <div>
+                Village : <input type="text" name="Village" id="D" style="font-size: 21px; font-family: monospace;">
+            </div>
+            <br>
+            <div>
+                Pin Code * : <input type="number" name="PC" id="E" style="font-size: 21px; font-family: monospace;" required>
+            </div>
+            <br>
+            <div> Contact * : <input type="number" name="Contact" id="F" style="font-size: 21px; font-family: monospace;" required>
+            </div>
+            <br>
+            <div>
+                Emergency number * : <input type="number" name="G" id="" style="font-size: 21px; font-family: monospace;" required>
+            </div>
+            <br>
+            <div>
+                Hospital Primary Email Id * :
+                <input type="email" name="Email_id1" class="h" style="font-size: 21px; font-family: monospace;" required>
+            </div>
+            <br>
+            <div>
+                Hospital Secondary Email Id * : <input type="email" name="Email_id2" id="I" style="font-size: 21px; font-family: monospace;" required>
+            </div>
+            <br>
+            <div>
+                Website : <input type="url" name="web" id="J" style="font-size: 21px; font-family: monospace;" placeholder="www.website.com">
+            </div>
+            <br>
+            <div>
+                Ambulance Phone No : <input type="number" name="Ano" id="K" style="font-size: 21px; font-family: monospace;">
+            </div>
+            <br>
+            <div>
+                MEDICAL INSURANCE : <input type="text" name="MI" id="mi" style="font-size: 21px; font-family: monospace;">
+            </div>
+
+            <div class="box">
+                <p><br>Email ID : </p>
+                <input type="email" name="email" id="signup-email" placeholder="Enter your email" style="font-size: 21px; font-family: monospace;" required>
+            </div>
+
+            <div class="box">
+                <p><br>Username : </p>
+                <input type="username" name="username" id="signup-username" placeholder="Enter an username" style="font-size: 21px; font-family: monospace;" required>
+            </div>
+
+            <div class="box">
+                <p>PASSWORD :</p>
+                <input type="password" name="password1" id="signup-password1" placeholder="Enter your password" style="font-size: 21px; font-family: monospace;" required>
+            </div>
+
+            <br>
+
+            <div class="box">
+                <p>CONFIRM PASSWORD : </p>
+                <input type="password" name="password2" id="signup-password2" placeholder="Enter your password again" style="font-size: 21px; font-family: monospace;" required>
+            </div>
+
+
+            <br>
+
+            <p class="boom">
+                <input type="submit" class="sub" value="Submit Now">
+                <input type="reset" value="Reset">
+            </p>
+
+        </form>
+    </div>
+    <script defer src="../JS/Hregistration.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAMqbgnd-dLz8mtk_1AMseLq57826_nd4E",
+            authDomain: "hospital-management-syst-f24b1.firebaseapp.com",
+            databaseURL: "https://hospital-management-syst-f24b1.firebaseio.com",
+            projectId: "hospital-management-syst-f24b1",
+            storageBucket: "hospital-management-syst-f24b1.appspot.com",
+            messagingSenderId: "460067289116",
+            appId: "1:460067289116:web:1f5a94a2f80a0fe4c807d9",
+            measurementId: "G-7VSJTC4C0V"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const Hr = firebase.firestore();
+        Hr.settings({
+            timestampsInSnapshots: true
+        });
+        const auth = firebase.auth();
+    </script>
+
+</body>
+
+</html>
