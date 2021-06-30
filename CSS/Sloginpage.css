@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.image {
+    background-image: url('../images/MRI.jpg');
+    background-size: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    /* z-index: -5; */
+}
+
+.container {
+    color: white;
+    background: #0000009c;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 350px;
+    width: 100%;
+    padding: 25px;
+    margin: auto;
+    /* width: 300px; */
+    border: 3px solid blue;
+    border-radius: 20px;
+    /* top: 25%;
+    left: 36%; */
+    justify-content: center;
+}
+
+.container h1 {
+    border-bottom: 5px solid whitesmoke;
+    color: whitesmoke;
+    margin-bottom: 43px;
+    padding: 13px 0;
+    text-align: center;
+}
+
+.box {
+    width: 100%;
+    border: 4px solid cadetblue;
+    border-radius: 30px;
+}
+
+.box input {
+    width: 94%;
+    height: 25px;
+    font-size: 15px;
+    outline: none;
+    color: black;
+    border-radius: 50px;
+    margin: 0px 0px;
+    padding: 11px;
+    /* border-color: #673AB7; */
+    background: lightblue;
+    border: 52px;
+}
+
+.btn1 {
+    text-decoration: none;
+    color: black;
+    outline: none;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: bold;
+    width: 500%;
+    margin: 28px 0;
+    padding: 9px;
+    border: 4px solid cadetblue;
+    border-radius: 18px;
+    background: aquamarine;
+}
+
+.btn1:hover {
+    cursor: pointer;
+    background-color: cornflowerblue;
+}
+
+.btn {
+    text-decoration: none;
+    outline: none;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: bold;
+    width: 100%;
+    margin: 8px 0;
+    padding: 9px;
+    border: 4px solid cadetblue;
+    border-radius: 18px;
+    background: aquamarine;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: cornflowerblue;
+}

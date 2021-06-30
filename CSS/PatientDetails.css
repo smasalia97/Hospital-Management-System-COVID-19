@@ -1,0 +1,161 @@
+body {
+    background: lightskyblue;
+    font-family: ubuntu;
+}
+
+h1 {
+    color: #fff;
+    font-size: 64px;
+    letter-spacing: 2px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.content {
+    background: #fff;
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 20px 30px;
+    border-radius: 10px 120px 10px 10px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 20px;
+    background: #f6f6f6;
+    font-size: 20px;
+    color: #555;
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+    height: auto;
+}
+
+li:nth-child(even) {
+    padding: 20px;
+    background: #f2f2f2;
+}
+
+li span {
+    display: block;
+}
+
+li span:nth-child(2) {
+    font-size: 16px;
+    margin-top: 6px;
+    color: #999;
+    background: #f2f2f2;
+}
+
+li div {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    background: rgba(255, 255, 255, 0.6);
+    width: 40px;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form input {
+    float: left;
+    width: 38%;
+    margin: 0;
+    border: 0;
+    border-bottom: 1px solid #eee;
+    margin: 0 1%;
+    padding: 10px;
+    display: block;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+form input:focus {
+    outline: none;
+    border-bottom: 3px solid #88236f;
+    padding-bottom: 8px;
+    transition: all ease 0.2s;
+}
+
+form:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+button {
+    border: 0;
+    background: #fff;
+    border-radius: 10px;
+    padding: 13px;
+    width: 14%;
+    box-shadow: -1px 0px 1px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #999;
+}
+
+#add {
+    border-radius: 13px;
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 15px 60px;
+    margin: 10px 10px;
+    background-color: lightblue;
+    color: black;
+}
+
+#add:hover {
+    cursor: pointer;
+    background-color: cornflowerblue;
+}
+
+.collapsible {
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    margin: .5rem 0 1rem 0
+}
+
+.collapsible-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    line-height: 1.5;
+    padding: 1rem;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd
+}
+
+.collapsible-header:focus {
+    outline: 0
+}
+
+.collapsible-header i {
+    width: 2rem;
+    font-size: 1.6rem;
+    display: inline-block;
+    text-align: center;
+    margin-right: 1rem
+}
+
+.keyboard-focused .collapsible-header:focus {
+    background-color: #eee
+}
+
+.collapsible-body {
+    display: none;
+    border-bottom: 1px solid #ddd;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 2rem
+}
